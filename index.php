@@ -39,7 +39,7 @@ require_once __DIR__ . '/db/db.php';
                 <img src="img/<?php echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php $movie->image?->title ?? '' ?>">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $movie->title ?></h5>
-                    <p class="card-text"><?php echo $movie->type ?></p>
+                    <p class="card-text"><?php echo implode(', ', $movie->type) ?></p>
                     <p class="card-text"><?php echo $movie->nationality ?></p>
                     <p class="card-text"><?php echo $movie->description ?></p>
                 </div>

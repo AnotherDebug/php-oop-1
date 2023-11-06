@@ -11,7 +11,7 @@ class Movie
     public $image;
 
     //dichiaro il costruttore e gli passo le variabili;
-    public function __construct(string $_title, string $_type, string $_nationality, string $_description, Media $_image = null)
+    public function __construct(string $_title, array $_type, string $_nationality, string $_description, Media $_image = null)
     {
         $this->title = $_title;
         $this->type = $_type;

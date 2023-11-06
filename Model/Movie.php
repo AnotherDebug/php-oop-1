@@ -19,4 +19,9 @@ class Movie
         $this->description = $_description;
         $this->image = $_image;
     }
-};
+
+    public function getFullMovie() {
+        return "$this->title,  $this->type / $this->nationality / $this->description";
+    }
+
+};    

@@ -26,21 +26,24 @@ require_once __DIR__ . '/db/db.php';
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class=" bg-dark ">
+
+    <h1 class="title text-center m-5 text-light ">Lista Films</h1>
 
     <div class="container d-flex flex-wrap  mt-5">
 
-    <?php foreach($movies as $movie): ?>
 
-        <div class="card m-5 " style="width: 18rem;">
-            <img src="img/<?php echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php $movie->image?->title ?? '' ?>">
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $movie->title ?></h5>
-                <p class="card-text"><?php echo $movie->type ?></p>
-                <p class="card-text"><?php echo $movie->nationality ?></p>
-                <p class="card-text"><?php echo $movie->description ?></p>
+        <?php foreach ($movies as $movie) : ?>
+
+            <div class="card m-5 " style="width: 18rem;">
+                <img src="img/<?php echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php $movie->image?->title ?? '' ?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $movie->title ?></h5>
+                    <p class="card-text"><?php echo $movie->type ?></p>
+                    <p class="card-text"><?php echo $movie->nationality ?></p>
+                    <p class="card-text"><?php echo $movie->description ?></p>
+                </div>
             </div>
-        </div>
 
         <?php endforeach; ?>
 

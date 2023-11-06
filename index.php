@@ -2,18 +2,7 @@
 
 require_once __DIR__ . '/Model/Movie.php';
 
-class Media
-{
-    public $fileName;
-    public $title;
-    public $type = 'image';
-
-    public function __construct($_fileName, $_title)
-    {
-        $this->fileName = $_fileName;
-        $this->title = $_title;
-    }
-};
+require_once __DIR__ . '/Model/Media.php';
 
 
 

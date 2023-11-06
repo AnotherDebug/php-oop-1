@@ -50,7 +50,7 @@ $movies = [
     new Movie('Cocco di nonna', 'Commedia', 'USA', 'Durante il giorno Alex (Allen Covert) testa videogame e fuma spinelli, di notte si dedica allo sviluppo di un nuovo gioco di sua invenzione. Le cose iniziano a complicarsi quando Alex è costretto ad andare a vivere con la nonna Lilly e le sue amiche Grace e Bea. Ai colleghi racconta delle sue nuove inquiline belle e sexy, ma un giorno la nonna e le sue amiche si presentano sul posto di lavoro dove Alex ha già numerosi problemi con J.P., inventore di videogiochi che sembra uscito da una parodia di Matrix e con Samantha, la manager incaricata di seguire l\'ultima fase dello sviluppo de "Lo sterminatore 3" il gioco che dovrà conquistare il mercato.')
 ];
 
-var_dump($movies);
+//var_dump($movies);
 
 ?>
 
@@ -62,12 +62,29 @@ var_dump($movies);
     <title>Movie</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Ciao</h1>
+    <div class="container d-flex my-5">
+
+
+        <div class="card m-5 " style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>
+
+
+    </div>
 
 </body>
 

@@ -27,5 +27,25 @@ class TvSerie extends Production
         parent:: __construct($_title, $_direction, $_cast, $_type, $_nationality, $_distribution, $_description, $_image);
     }
 
+    public function getFirstEp() {
+        return $this->aired_from_year;
+    }
+
+    public function getLastEp() {
+        return $this->aired_to_year;
+    }
+
+    public function getNumEp() {
+        return $this->number_of_episodes;
+    }
+
+    public function getNumSeasons() {
+        return $this->number_of_seasons;
+    }
+
+    public function getInfoSeries() {
+        return "<strong>Primo episodio:</strong> $this->aired_from_year<br> <strong>Ultimo episodio:</strong> $this->aired_to_year<br>  <strong>Numero di episodi:</strong> $this->number_of_episodes<br>  <strong>Stagioni:</strong> $this->number_of_seasons";
+    }
+
 
 };  

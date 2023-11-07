@@ -26,8 +26,36 @@ class Production
         $this->image = $_image;
     }
 
-    public function getFullMovie() {
+    public function getFullInfo() {
         return "$this->title | $this->type | $this->nationality | $this->description";
+    }
+
+    public function getTitle() {
+        return $this->title;
+    }
+
+    public function getDirection() {
+        return $this->direction;
+    }
+
+    public function getCast() {
+        return $this->cast;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function getNationality() {
+        return $this->nationality;
+    }
+
+    public function getDistribution() {
+        return $this->distribution;
+    }
+
+    public function getDescription() {
+        return $this->description;
     }
 
 };    

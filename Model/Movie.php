@@ -1,27 +1,20 @@
 <?php
 
 
-class Movie
+class Movie extends Production
 {
     //dichiaro le variabili d'istanza;
-    public $title;
-    public $type;
-    public $nationality;
-    public $description;
-    public $image;
+    public $published_year;
+    public $running_time;
 
     //dichiaro il costruttore e gli passo le variabili;
-    public function __construct(string $_title, array $_type, string $_nationality, string $_description, Media $_image = null)
+    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, string $_published_year, string $_running_time)
     {
-        $this->title = $_title;
-        $this->type = $_type;
-        $this->nationality = $_nationality;
-        $this->description = $_description;
-        $this->image = $_image;
+        $this->published_year = $_published_year;
+        $this->running_time = $_running_time;
+
+        parent:: __construct($_title, $_direction, $_cast, $_type, $_nationality, $_distribution, $_description, $_image);
     }
 
-    public function getFullMovie() {
-        return "$this->title,  $this->type / $this->nationality / $this->description";
-    }
 
-};    
+};  

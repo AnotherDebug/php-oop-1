@@ -27,5 +27,9 @@ class Movie extends Production
         return $this->running_time;
     }
 
+    public function getInfoMovies() {
+        return "<strong>Anno di pubblicazione:</strong> $this->published_year<br> <strong>Durata:</strong> $this->running_time";
+    }
+
 
 };  

@@ -19,5 +19,13 @@ class Movie extends Production
         parent:: __construct($_title, $_direction, $_cast, $_type, $_nationality, $_distribution, $_description, $_image);
     }
 
+    public function getPublishedYear() {
+        return $this->published_year;
+    }
+
+    public function getRunningTime() {
+        return $this->running_time;
+    }
+
 
 };  

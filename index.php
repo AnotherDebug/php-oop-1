@@ -4,11 +4,12 @@ require_once __DIR__ . '/Model/Production.php';
 
 require_once __DIR__ . '/Model/Movie.php';
 
+require_once __DIR__ . '/Model/TvSerie.php';
+
 require_once __DIR__ . '/Model/Media.php';
 
 require_once __DIR__ . '/db/db.php';
 
-//var_dump($movies);
 
 ?>
 
@@ -17,7 +18,7 @@ require_once __DIR__ . '/db/db.php';
 <html lang="it">
 
 <head>
-    <title>Movie</title>
+    <title>PHP Object-oriented programming 1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

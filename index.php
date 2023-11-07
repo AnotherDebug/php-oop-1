@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Model/Production.php';
+
 require_once __DIR__ . '/Model/Movie.php';
 
 require_once __DIR__ . '/Model/Media.php';
@@ -33,19 +35,19 @@ require_once __DIR__ . '/db/db.php';
     <div class="container d-flex flex-wrap  mt-5">
 
 
-        <?php foreach ($movies as $movie) : ?>
+        <?php //foreach ($movies as $movie) : ?>
 
             <div class="card m-5 " style="width: 18rem;">
-                <img src="img/<?php echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php $movie->image?->title ?? '' ?>">
+                <img src="img/<?php //echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php //$movie->image?->title ?? '' ?>">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $movie->title ?></h5>
-                    <p class="card-text"><?php echo implode(', ', $movie->type) ?></p>
-                    <p class="card-text"><?php echo $movie->nationality ?></p>
-                    <p class="card-text"><?php echo $movie->description ?></p>
+                    <h5 class="card-title"><?php //echo $movie->title ?></h5>
+                    <p class="card-text"><?php //echo implode(', ', $movie->type) ?></p>
+                    <p class="card-text"><?php //echo $movie->nationality ?></p>
+                    <p class="card-text"><?php //echo $movie->description ?></p>
                 </div>
             </div>
 
-        <?php endforeach; ?>
+        <?php //endforeach; ?>
 
     </div>
 

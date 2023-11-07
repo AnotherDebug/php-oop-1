@@ -48,6 +48,8 @@ require_once __DIR__ . '/db/db.php';
                     <p class="card-text"><span class="fw-bold">Nazionalità:</span> <?php echo $production->getNationality() ?></p>
                     <p class="card-text"><span class="fw-bold">Distribuzione:</span> <?php echo $production->getDistribution() ?></p>
                     <p class="card-text"><?php echo $production->getDescription() ?></p>
+
+                    <!-- Anno di pubblicazione -->
                     <p class="card-text"><span class="fw-bold">Anno di pubblicazione:</span>
                         <?php if (get_class($production) === 'Movie') {
                             echo $production->getPublishedYear();
@@ -56,6 +58,8 @@ require_once __DIR__ . '/db/db.php';
                         }
                         ?>
                     </p>
+
+                    <!-- Durata -->
                     <p class="card-text"><span class="fw-bold">Durata:</span>
                         <?php if (get_class($production) === 'Movie') {
                             echo $production->getRunningTime();
@@ -64,6 +68,18 @@ require_once __DIR__ . '/db/db.php';
                         }
                         ?>
                     </p>
+
+                    <!-- Info Serie Tv -->
+                    <p class="card-text">
+                        <?php if (get_class($production) === 'TvSerie') {
+                            echo $production->getInfoSeries();
+                        } else {
+                            echo '';
+                        }
+                        ?>
+                    </p>
+
+
                 </div>
             </div>
 

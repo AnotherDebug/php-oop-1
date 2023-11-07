@@ -36,19 +36,38 @@ require_once __DIR__ . '/db/db.php';
     <div class="container d-flex flex-wrap  mt-5">
 
 
-        <?php //foreach ($movies as $movie) : ?>
+        <?php foreach ($productions as $production) : ?>
 
             <div class="card m-5 " style="width: 18rem;">
-                <img src="img/<?php //echo $movie->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php //$movie->image?->title ?? '' ?>">
+                <img src="img/<?php echo $production->image?->fileName ?? 'TPM.jpg' ?>" class="card-img-top" alt="<?php $production->image?->title ?? '' ?>">
                 <div class="card-body">
-                    <h5 class="card-title"><?php //echo $movie->title ?></h5>
-                    <p class="card-text"><?php //echo implode(', ', $movie->type) ?></p>
-                    <p class="card-text"><?php //echo $movie->nationality ?></p>
-                    <p class="card-text"><?php //echo $movie->description ?></p>
+                    <h5 class="card-title"><?php echo $production->getTitle() ?></h5>
+                    <p class="card-text"><span class="fw-bold">Di:</span> <?php echo $production->getDirection() ?></p>
+                    <p class="card-text"><span class="fw-bold">Cast:</span> <?php echo $production->getCast() ?></p>
+                    <p class="card-text"><span class="fw-bold">Genere:</span> <?php echo $production->getType() ?></p>
+                    <p class="card-text"><span class="fw-bold">Nazionalità:</span> <?php echo $production->getNationality() ?></p>
+                    <p class="card-text"><span class="fw-bold">Distribuzione:</span> <?php echo $production->getDistribution() ?></p>
+                    <p class="card-text"><?php echo $production->getDescription() ?></p>
+                    <p class="card-text"><span class="fw-bold">Anno di pubblicazione:</span>
+                        <?php if (get_class($production) === 'Movie') {
+                            echo $production->getPublishedYear();
+                        } else {
+                            echo '-';
+                        }
+                        ?>
+                    </p>
+                    <p class="card-text"><span class="fw-bold">Durata:</span>
+                        <?php if (get_class($production) === 'Movie') {
+                            echo $production->getRunningTime();
+                        } else {
+                            echo '-';
+                        }
+                        ?>
+                    </p>
                 </div>
             </div>
 
-        <?php //endforeach; ?>
+        <?php endforeach; ?>
 
     </div>
 

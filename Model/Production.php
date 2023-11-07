@@ -39,11 +39,11 @@ class Production
     }
 
     public function getCast() {
-        return $this->cast;
+        return implode(', ', $this->cast);
     }
 
     public function getType() {
-        return $this->type;
+        return implode(', ', $this->type);
     }
 
     public function getNationality() {

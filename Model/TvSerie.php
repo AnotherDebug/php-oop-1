@@ -17,7 +17,7 @@ class TvSerie extends Production
     public $number_of_seasons;
 
     //dichiaro il costruttore e gli passo le variabili;
-    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, string $_aired_from_year, string $_aired_to_year, string $_number_of_episodes, string $_number_of_seasons)
+    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, string $_aired_from_year, string $_aired_to_year, int $_number_of_episodes, int $_number_of_seasons)
     {
         $this->aired_from_year = $_aired_from_year;
         $this->aired_to_year = $_aired_to_year;

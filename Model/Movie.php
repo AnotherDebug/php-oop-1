@@ -4,7 +4,10 @@
 class Movie extends Production
 {
     //dichiaro le variabili d'istanza;
+    //anno di pubblicazione
     public $published_year;
+
+    //durata in minuti
     public $running_time;
 
     //dichiaro il costruttore e gli passo le variabili;

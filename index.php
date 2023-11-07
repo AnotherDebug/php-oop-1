@@ -31,7 +31,7 @@ require_once __DIR__ . '/db/db.php';
 
 <body class=" bg-dark ">
 
-    <h1 class="title text-center m-5 text-light ">Lista Films</h1>
+    <h1 class="title text-center m-5 text-light ">Lista Films e Serie Tv</h1>
 
     <div class="container d-flex flex-wrap  mt-5">
 
@@ -49,25 +49,17 @@ require_once __DIR__ . '/db/db.php';
                     <p class="card-text"><span class="fw-bold">Distribuzione:</span> <?php echo $production->getDistribution() ?></p>
                     <p class="card-text"><?php echo $production->getDescription() ?></p>
 
-                    <!-- Anno di pubblicazione -->
-                    <p class="card-text"><span class="fw-bold">Anno di pubblicazione:</span>
+
+                    <!-- Info Movies -->
+                    <p class="card-text">
                         <?php if (get_class($production) === 'Movie') {
-                            echo $production->getPublishedYear();
+                            echo $production->getInfoMovies();
                         } else {
-                            echo '-';
+                            echo '';
                         }
                         ?>
                     </p>
 
-                    <!-- Durata -->
-                    <p class="card-text"><span class="fw-bold">Durata:</span>
-                        <?php if (get_class($production) === 'Movie') {
-                            echo $production->getRunningTime();
-                        } else {
-                            echo '-';
-                        }
-                        ?>
-                    </p>
 
                     <!-- Info Serie Tv -->
                     <p class="card-text">

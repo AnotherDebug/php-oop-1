@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/Trait/Rating.php';
+
 require_once __DIR__ . '/Model/Production.php';
 
 require_once __DIR__ . '/Model/Movie.php';

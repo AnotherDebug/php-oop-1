@@ -53,6 +53,8 @@ require_once __DIR__ . '/db/db.php';
 
                     <p><?php echo $production->getFullInfo() ?></p>
 
+                    <p><span class="fw-bold">Voto:</span> <?php echo $production->getRating() ?></p>
+
                 </div>
             </div>
 

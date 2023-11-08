@@ -26,7 +26,18 @@ class Production
         $this->distribution = $_distribution;
         $this->description = $_description;
         $this->image = $_image;
-        $this->rating = $_rating;
+
+        if(empty($_rating) === 0 || is_nan($_rating)){
+            var_dump(empty($_rating));
+            throw new Exception('Devi inserire un numero!');
+        }else{
+            if($_rating >= 0 && $_rating <= 5){
+                $this->rating = $_rating;
+            }else{
+                throw new Exception('Devi inserire un numero compreso tra 0 e 5!');
+            }
+        }
+
     }
 
     public function getFullInfo() {

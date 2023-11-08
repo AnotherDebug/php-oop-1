@@ -49,28 +49,7 @@ require_once __DIR__ . '/db/db.php';
                     <p class="card-text"><span class="fw-bold">Distribuzione:</span> <?php echo $production->getDistribution() ?></p>
                     <p class="card-text"><?php echo $production->getDescription() ?></p>
 
-
-                    <!-- Info Movies -->
-                    <p class="card-text">
-                        <?php if (get_class($production) === 'Movie') {
-                            echo $production->getFullInfo();
-                        } else {
-                            echo '';
-                        }
-                        ?>
-                    </p>
-
-
-                    <!-- Info Serie Tv -->
-                    <p class="card-text">
-                        <?php if (get_class($production) === 'TvSerie') {
-                            echo $production->getFullInfo();
-                        } else {
-                            echo '';
-                        }
-                        ?>
-                    </p>
-
+                    <p><?php echo $production->getFullInfo() ?></p>
 
                 </div>
             </div>

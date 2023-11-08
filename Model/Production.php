@@ -3,6 +3,8 @@
 
 class Production
 {
+    use Rating;
+
     //dichiaro le variabili d'istanza;
     public $title;
     public $direction;
@@ -14,7 +16,7 @@ class Production
     public $image;
 
     //dichiaro il costruttore e gli passo le variabili;
-    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null)
+    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, float $_rating)
     {
         $this->title = $_title;
         $this->direction = $_direction;
@@ -24,6 +26,7 @@ class Production
         $this->distribution = $_distribution;
         $this->description = $_description;
         $this->image = $_image;
+        $this->rating = $_rating;
     }
 
     public function getFullInfo() {

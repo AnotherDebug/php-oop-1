@@ -1,16 +1,21 @@
 <?php
 
-require_once __DIR__ . '/Trait/Rating.php';
 
-require_once __DIR__ . '/Model/Production.php';
+try {
+    require_once __DIR__ . '/Trait/Rating.php';
 
-require_once __DIR__ . '/Model/Movie.php';
+    require_once __DIR__ . '/Model/Production.php';
 
-require_once __DIR__ . '/Model/TvSerie.php';
+    require_once __DIR__ . '/Model/Movie.php';
 
-require_once __DIR__ . '/Model/Media.php';
+    require_once __DIR__ . '/Model/TvSerie.php';
 
-require_once __DIR__ . '/db/db.php';
+    require_once __DIR__ . '/Model/Media.php';
+
+    require_once __DIR__ . '/db/db.php';
+} catch (Exception $e) {
+    $error = $e->getMessage();
+}
 
 
 ?>
@@ -35,10 +40,10 @@ require_once __DIR__ . '/db/db.php';
 
     <h1 class="title text-center m-5 text-light ">Lista Films e Serie Tv</h1>
 
-    <div class="alert alert-danger mx-5 " role="alert">
-        A simple danger alert—check it out!
+    <div <?php if (isset($error)) : ?> class="alert alert-danger mx-5 " role="alert">
+        <?php echo $error ?>
     </div>
-
+<?php else : ?>
     <div class="container d-flex flex-wrap  mt-5">
 
 
@@ -65,7 +70,7 @@ require_once __DIR__ . '/db/db.php';
         <?php endforeach; ?>
 
     </div>
-
+<?php endif; ?>
 </body>
 
 </html>

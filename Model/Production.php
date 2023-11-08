@@ -27,49 +27,50 @@ class Production
         $this->description = $_description;
         $this->image = $_image;
 
-        if(empty($_rating) === 0 || is_nan($_rating)){
-            var_dump(empty($_rating));
-            throw new Exception('Devi inserire un numero!');
-        }else{
-            if($_rating >= 0 && $_rating <= 5){
-                $this->rating = $_rating;
-            }else{
-                throw new Exception('Devi inserire un numero compreso tra 0 e 5!');
-            }
+        if ($_rating >= 0 && $_rating <= 5) {
+            $this->rating = $_rating;
+        } else {
+            throw new Exception('Devi inserire un numero compreso tra 0 e 5!');
         }
-
     }
 
-    public function getFullInfo() {
+    public function getFullInfo()
+    {
         return "$this->title | $this->type | $this->nationality | $this->description";
     }
 
-    public function getTitle() {
+    public function getTitle()
+    {
         return $this->title;
     }
 
-    public function getDirection() {
+    public function getDirection()
+    {
         return $this->direction;
     }
 
-    public function getCast() {
+    public function getCast()
+    {
         return implode(', ', $this->cast);
     }
 
-    public function getType() {
+    public function getType()
+    {
         return implode(', ', $this->type);
     }
 
-    public function getNationality() {
+    public function getNationality()
+    {
         return $this->nationality;
     }
 
-    public function getDistribution() {
+    public function getDistribution()
+    {
         return $this->distribution;
     }
 
-    public function getDescription() {
+    public function getDescription()
+    {
         return $this->description;
     }
-
-};    
+};

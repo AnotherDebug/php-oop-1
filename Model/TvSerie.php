@@ -43,7 +43,7 @@ class TvSerie extends Production
         return $this->number_of_seasons;
     }
 
-    public function getInfoSeries() {
+    public function getFullInfo() {
         return "<strong>Primo episodio:</strong> $this->aired_from_year<br> <strong>Ultimo episodio:</strong> $this->aired_to_year<br>  <strong>Numero di episodi:</strong> $this->number_of_episodes<br>  <strong>Stagioni:</strong> $this->number_of_seasons";
     }
 

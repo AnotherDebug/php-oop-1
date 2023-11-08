@@ -53,7 +53,7 @@ require_once __DIR__ . '/db/db.php';
                     <!-- Info Movies -->
                     <p class="card-text">
                         <?php if (get_class($production) === 'Movie') {
-                            echo $production->getInfoMovies();
+                            echo $production->getFullInfo();
                         } else {
                             echo '';
                         }
@@ -64,7 +64,7 @@ require_once __DIR__ . '/db/db.php';
                     <!-- Info Serie Tv -->
                     <p class="card-text">
                         <?php if (get_class($production) === 'TvSerie') {
-                            echo $production->getInfoSeries();
+                            echo $production->getFullInfo();
                         } else {
                             echo '';
                         }

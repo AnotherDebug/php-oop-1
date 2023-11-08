@@ -35,6 +35,10 @@ require_once __DIR__ . '/db/db.php';
 
     <h1 class="title text-center m-5 text-light ">Lista Films e Serie Tv</h1>
 
+    <div class="alert alert-danger mx-5 " role="alert">
+        A simple danger alert—check it out!
+    </div>
+
     <div class="container d-flex flex-wrap  mt-5">
 
 

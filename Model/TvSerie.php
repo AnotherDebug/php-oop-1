@@ -17,14 +17,14 @@ class TvSerie extends Production
     public $number_of_seasons;
 
     //dichiaro il costruttore e gli passo le variabili;
-    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, string $_aired_from_year, string $_aired_to_year, int $_number_of_episodes, int $_number_of_seasons)
+    public function __construct(string $_title, string $_direction, array $_cast, array $_type, string $_nationality, string $_distribution, string $_description, Media $_image = null, float $_rating, string $_aired_from_year, string $_aired_to_year, int $_number_of_episodes, int $_number_of_seasons)
     {
         $this->aired_from_year = $_aired_from_year;
         $this->aired_to_year = $_aired_to_year;
         $this->number_of_episodes = $_number_of_episodes;
         $this->number_of_seasons = $_number_of_seasons;
 
-        parent:: __construct($_title, $_direction, $_cast, $_type, $_nationality, $_distribution, $_description, $_image);
+        parent:: __construct($_title, $_direction, $_cast, $_type, $_nationality, $_distribution, $_description, $_image, $_rating);
     }
 
     public function getFirstEp() {
